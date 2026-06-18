@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ирина Попович — нутрициолог и anti-age специалист для женщин 45+. Коррекция питания, восполнение дефицитов, сопровождение здоровья.">
+    <meta name="keywords" content="нутрициолог, anti-age, коррекция питания, здоровье, женщины 45+, Ирина Попович">
+    <meta name="author" content="Ирина Попович">
+    <meta property="og:title" content="Ирина Попович — Нутрициолог">
+    <meta property="og:description" content="Нутрициолог для женщин 45+. Ваш организм больше не работает как раньше? Разберёмся.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vladimir-rnd.github.io/ira-popovich-lite/">
+    <meta property="og:locale" content="ru_RU">
+    <title>Ирина Попович — Нутрициолог</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            color: #2E2E2E;
+            background-color: #FFFAF4;
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        /* ========== UTILITY ========== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            text-align: center;
+            margin-bottom: 60px;
+            color: #2E2E2E;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #3D6B4F;
+            margin: 16px auto 0;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            background-color: #3D6B4F;
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            letter-spacing: 0.3px;
+        }
+
+        .btn:hover {
+            background-color: #2F5540;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(61, 107, 79, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #3D6B4F;
+            color: #3D6B4F;
+        }
+
+        .btn-outline:hover {
+            background: #3D6B4F;
+            color: #fff;
+        }
+
+        .btn-sm {
+            padding: 12px 28px;
+            font-size: 0.9rem;
+        }
+
+        /* ========== FADE-IN ANIMATION ========== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== HEADER ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 18px 0;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .header.scrolled {
+            background: rgba(255, 250, 244, 0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            padding: 12px 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2E2E2E;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2E2E2E;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #3D6B4F;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #3D6B4F;
+        }
+
+        /* Burger */
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+        .burger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: #2E2E2E;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .burger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .burger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .burger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 250, 244, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #2E2E2E;
+            transition: color 0.3s;
+        }
+
+        .mobile-menu a:hover {
+            color: #3D6B4F;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding-top: 100px;
+            padding-bottom: 60px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #FFFAF4 0%, #FFF5EA 50%, #F5EDE3 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(61, 107, 79, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #3D6B4F;
+            margin-bottom: 110px;
+            position: relative;
+            padding-left: 40px;
+            line-height: 2;
+        }
+
+        .hero-label::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.85em;
+            width: 28px;
+            height: 1px;
+            background: #3D6B4F;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            margin-bottom: 24px;
+            color: #2E2E2E;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 12px;
+            max-width: 500px;
+            line-height: 1.8;
+        }
+
+        .hero p:last-of-type {
+            margin-bottom: 36px;
+        }
+
+        .hero-image {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-image img {
+            border-radius: 20px;
+            width: 100%;
+            height: 560px;
+            object-fit: cover;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            background: #fff;
+        }
+
+        .about .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image img {
+            border-radius: 20px;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+
+        .about-text p:first-of-type {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #2E2E2E;
+        }
+
+        .about-text p:last-of-type {
+            color: #3D6B4F;
+            font-weight: 700;
+            font-size: 1.05rem;
+        }
+
+        /* ========== PROBLEMS ========== */
+        .problems {
+            background: #FFFAF4;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 30px;
+            align-items: start;
+        }
+
+        .problem-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid #3D6B4F;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .problem-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 18px;
+            color: #3D6B4F;
+        }
+
+        .problem-card p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.75;
+        }
+
+        .problem-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .problem-card ul li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .problem-card ul li::before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #3D6B4F;
+            font-weight: 700;
+        }
+
+        .problem-card .problem-quote {
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        /* ========== EDUCATION ========== */
+        .education {
+            background: #fff;
+        }
+
+        .edu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .edu-item {
+            background: #FFFAF4;
+            border-radius: 12px;
+            padding: 28px 24px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 3px solid #3D6B4F;
+        }
+
+        .edu-item[data-cert] {
+            cursor: pointer;
+        }
+
+        .edu-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .edu-item .institution {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #2E2E2E;
+            margin-bottom: 6px;
+        }
+
+        .edu-item .program {
+            font-size: 0.88rem;
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .edu-item .year {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #3D6B4F;
+            letter-spacing: 0.5px;
+        }
+
+
+        /* ========== CERTIFICATES ========== */
+        .certificates {
+            background: #FFFAF4;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .cert-item {
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            background: #fff;
+        }
+
+        .cert-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .cert-item img {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .cert-item figcaption {
+            padding: 12px 14px;
+            font-size: 0.82rem;
+            color: #555;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+
+        /* ========== ALGORITHM ========== */
+        .algorithm {
+            background: #fff;
+        }
+
+        .timeline {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 60px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #3D6B4F, rgba(61, 107, 79, 0.2));
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 36px;
+            padding: 24px 28px;
+            background: #FFFAF4;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateX(6px);
+        }
+
+        .timeline-item::before {
+            content: attr(data-step);
+            position: absolute;
+            left: -48px;
+            top: 24px;
+            width: 36px;
+            height: 36px;
+            background: #3D6B4F;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: 700;
+            box-shadow: 0 3px 10px rgba(61, 107, 79, 0.3);
+        }
+
+        .timeline-item p {
+            color: #444;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ========== PRICING ========== */
+        .pricing {
+            background: linear-gradient(135deg, #F5EDE3 0%, #FFFAF4 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 44px 32px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid #3D6B4F;
+            transform: scale(1.04);
+        }
+
+        .pricing-card.featured:hover {
+            transform: scale(1.04) translateY(-8px);
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #3D6B4F;
+            color: #fff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 6px 20px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2E2E2E;
+        }
+
+        .pricing-subtitle {
+            display: inline-block;
+            margin-top: 4px;
+            font-size: 0.85em;
+            font-weight: 400;
+            color: #6b6b6b;
+            font-style: italic;
+        }
+
+        .pricing-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3D6B4F;
+            margin-bottom: 8px;
+        }
+
+        .pricing-duration {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            text-align: left;
+            margin-bottom: 32px;
+            flex-grow: 1;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: #555;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .pricing-features li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 14px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3D6B4F;
+            opacity: 0.6;
+        }
+
+        /* ========== PRODUCTS ========== */
+        .products {
+            background: #fff;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #FFFAF4;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card-body {
+            padding: 28px 24px;
+        }
+
+        .product-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #2E2E2E;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        /* ========== FREE MATERIALS ========== */
+        .free-materials {
+            background: #FFFAF4;
+        }
+
+        .free-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .free-item {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .free-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .free-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .free-item-body {
+            padding: 20px;
+        }
+
+        .free-item h4 {
+            font-size: 1rem;
+            margin-bottom: 14px;
+            color: #2E2E2E;
+            line-height: 1.4;
+            font-family: 'Manrope', sans-serif;
+            font-weight: 600;
+        }
+
+        /* ========== DISCLAIMER ========== */
+        .disclaimer {
+            background: #f5ede3;
+            padding: 50px 0;
+        }
+
+        .disclaimer p {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 0.82rem;
+            color: #888;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        /* ========== CONTACT / CTA ========== */
+        .contact {
+            background: linear-gradient(135deg, #3D6B4F 0%, #2F5540 50%, #1E3F2E 100%);
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .contact h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .contact h2::after {
+            display: none;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 50px;
+            font-family: 'Manrope', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact-btn svg {
+            width: 22px;
+            height: 22px;
+            fill: currentColor;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #1E3F2E;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 40px 0;
+        }
+
+        .footer .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-left p {
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .footer-social svg {
+            width: 18px;
+            height: 18px;
+            fill: rgba(255, 255, 255, 0.8);
+        }
+
+        /* ========== CERTIFICATE LIGHTBOX ========== */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-content {
+                order: 2;
+            }
+
+            .hero-image {
+                order: 1;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-label {
+                padding-left: 0;
+            }
+
+            .hero-label::before {
+                display: none;
+            }
+
+            .about .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+                max-width: 540px;
+                margin: 0 auto;
+            }
+
+            .pricing-grid,
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin: 0 auto;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .pricing-card.featured:hover {
+                transform: translateY(-8px);
+            }
+
+            .edu-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .free-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .burger {
+                display: flex;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .section-title {
+                margin-bottom: 40px;
+            }
+
+            .hero {
+                padding-top: 100px;
+                padding-bottom: 60px;
+                min-height: auto;
+            }
+
+            .hero-image img {
+                height: 400px;
+            }
+
+            .about-image img {
+                height: 400px;
+            }
+
+            .edu-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .free-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cert-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .timeline {
+                padding-left: 50px;
+            }
+
+            .footer .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-image img {
+                height: 320px;
+            }
+
+            .about-image img {
+                height: 320px;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cert-grid {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">Ирина Попович</a>
+            <nav class="nav-links">
+                <a href="#about">Обо мне</a>
+                <a href="#education">Образование</a>
+                <a href="#pricing">Консультация</a>
+                <a href="#products">Продукты</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+            <button class="burger" id="burger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#about">Обо мне</a>
+        <a href="#education">Образование</a>
+        <a href="#pricing">Консультация</a>
+        <a href="#products">Продукты</a>
+        <a href="#contact">Контакты</a>
+    </div>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <span class="hero-label">Нутрициолог<br>Anti-age специалист</span>
+                <h1>Ваш организм больше не&nbsp;работает как раньше?</h1>
+                <p>Если вам 45+ и вы всё чаще чувствуете:<br>«Я как будто разваливаюсь» — дело не в возрасте.</p>
+                <p><strong>Это сигнал, что система дала сбой.<br>И с этим можно разобраться.</strong></p>
+                <a href="#pricing" class="btn">Записаться на консультацию</a>
+            </div>
+            <div class="hero-image fade-in">
+                <img src="img/hero.jpg" alt="Ирина Попович — нутрициолог" loading="eager">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="about-image fade-in">
+                <img src="img/about.jpg" alt="Ирина Попович" loading="lazy">
+            </div>
+            <div class="about-text fade-in">
+                <h2 class="section-title" style="text-align: left;">Давайте знакомиться!</h2>
+                <p>Меня зовут Ирина. Я нутрициолог для&nbsp;женщин&nbsp;45+.</p>
+                <p>Я работаю не с &laquo;правильным питанием&raquo; и&nbsp;не&nbsp;с&nbsp;запретами в&nbsp;духе &laquo;это&nbsp;можно&nbsp;&mdash;&nbsp;это&nbsp;нельзя&raquo;.</p>
+                <p><strong>Я работаю с другим:</strong> почему ваше тело перестало нормально функционировать.</p>
+                <p>Моя задача&nbsp;&mdash; не заглушить симптомы, а&nbsp;понять, где система дала сбой, и&nbsp;аккуратно собрать её заново&nbsp;&mdash; под&nbsp;ваш возраст, гормональный фон, образ жизни и&nbsp;состояние.</p>
+                <p><strong>Потому что после 45 не работает универсальный подход.<br>Работает только индивидуальная логика.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROBLEMS ===== -->
+    <section class="problems section" id="problems">
+        <div class="container">
+            <h2 class="section-title fade-in">С какими запросами я работаю</h2>
+            <div class="problems-grid">
+                <div class="problem-card fade-in">
+                    <h3>Базовые запросы</h3>
+                    <p>Ко мне приходят, когда:</p>
+                    <ul>
+                        <li>просыпаются уже без сил</li>
+                        <li>сон становится поверхностным, прерывистым или исчезает</li>
+                        <li>вес растёт, даже при &laquo;нормальном&raquo; питании</li>
+                        <li>появляется отёчность и ощущение тяжести в&nbsp;теле</li>
+                        <li>возникает тревожность, раздражительность, перепады настроения</li>
+                        <li>пищеварение работает нестабильно</li>
+                        <li>еда перестаёт давать энергию</li>
+                    </ul>
+                    <p class="problem-quote">И очень часто звучит одно и&nbsp;то&nbsp;же:<br><strong>&laquo;Я не понимаю, что со мной происходит&raquo;</strong></p>
+                </div>
+                <div class="problem-card fade-in">
+                    <h3>Биохакинг</h3>
+                    <p>Вы совершенно здоровы и&nbsp;хотите оставаться таким и&nbsp;дальше. Или&nbsp;же у&nbsp;вас есть амбициозные цели по&nbsp;здоровью.</p>
+                    <p>Все запросы оговариваются отдельно.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="education section" id="education">
+        <div class="container">
+            <h2 class="section-title fade-in">Образование</h2>
+            <div class="edu-grid">
+                <div class="edu-item edu-diploma fade-in" data-cert="img/cert-diploma.jpg">
+                    <div class="institution">МФУ &laquo;Синергия&raquo;</div>
+                    <div class="program">Диплом о профессиональной переподготовке: &laquo;Нутрициология&raquo;</div>
+                    <div class="year">2023</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-8.jpg">
+                    <div class="institution">Д. Ермишина, интегративный врач-гастроэнтеролог</div>
+                    <div class="program">Практика нутрициолога. Комплексная работа специалиста</div>
+                    <div class="year">2024</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-7.jpg">
+                    <div class="institution">Университет образовательной медицины (UOM)</div>
+                    <div class="program">&laquo;Всемогущий кишечник&raquo;</div>
+                    <div class="year">2024</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-6.jpg">
+                    <div class="institution">Университет образовательной медицины (UOM)</div>
+                    <div class="program">&laquo;Комплексная интегративная диагностика&raquo;</div>
+                    <div class="year">2023</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-4.jpg">
+                    <div class="institution">Университет образовательной медицины (UOM)</div>
+                    <div class="program">&laquo;Детоксикация в домашних условиях&raquo;</div>
+                    <div class="year">2023</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-5.jpg">
+                    <div class="institution">Университет образовательной медицины (UOM)</div>
+                    <div class="program">&laquo;Детский иммунитет&raquo;</div>
+                    <div class="year">2023</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-9.jpg">
+                    <div class="institution">Международная академия EDPRO</div>
+                    <div class="program">&laquo;Детская нутрициология&raquo;</div>
+                    <div class="year">2024</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-2.jpg">
+                    <div class="institution">PhytoScience, Академия натуропатической медицины</div>
+                    <div class="program">Бизнес-интенсив для нутрициологов MEET UP</div>
+                    <div class="year">2024</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-1.jpg">
+                    <div class="institution">Школа здоровья Доктора Павлова</div>
+                    <div class="program">PRO Женское здоровье</div>
+                    <div class="year">2025</div>
+                </div>
+                <div class="edu-item fade-in" data-cert="img/cert-3.jpg">
+                    <div class="institution">Авторский проект PREVENT 2.0 (@Dr.Irina_Sit)</div>
+                    <div class="program">&laquo;Анализы и Витамины&raquo;</div>
+                    <div class="year">2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATES ===== -->
+    <section class="certificates section" id="certificates">
+        <div class="container">
+            <h2 class="section-title fade-in">Дипломы и сертификаты</h2>
+            <div class="cert-grid fade-in">
+                <figure class="cert-item" data-src="img/cert-diploma.jpg">
+                    <img src="img/cert-diploma.jpg" alt="Диплом МФУ Синергия — Нутрициология" loading="lazy">
+                    <figcaption>Диплом &laquo;Нутрициология&raquo;, МФУ&nbsp;&laquo;Синергия&raquo;, 2023</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-8.jpg">
+                    <img src="img/cert-8.jpg" alt="Практика нутрициолога — Д. Ермишина" loading="lazy">
+                    <figcaption>Практика нутрициолога, Д.&nbsp;Ермишина, 2024</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-7.jpg">
+                    <img src="img/cert-7.jpg" alt="Всемогущий кишечник — UOM" loading="lazy">
+                    <figcaption>&laquo;Всемогущий кишечник&raquo;, UOM, 2024</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-6.jpg">
+                    <img src="img/cert-6.jpg" alt="Комплексная интегративная диагностика — UOM" loading="lazy">
+                    <figcaption>&laquo;Интегративная диагностика&raquo;, UOM, 2023</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-4.jpg">
+                    <img src="img/cert-4.jpg" alt="Детоксикация в домашних условиях — UOM" loading="lazy">
+                    <figcaption>&laquo;Детоксикация&raquo;, UOM, 2023</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-5.jpg">
+                    <img src="img/cert-5.jpg" alt="Детский иммунитет — UOM" loading="lazy">
+                    <figcaption>&laquo;Детский иммунитет&raquo;, UOM, 2023</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-9.jpg">
+                    <img src="img/cert-9.jpg" alt="Детская нутрициология — EDPRO" loading="lazy">
+                    <figcaption>&laquo;Детская нутрициология&raquo;, EDPRO, 2024</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-2.jpg">
+                    <img src="img/cert-2.jpg" alt="Бизнес-интенсив — PhytoScience" loading="lazy">
+                    <figcaption>MEET UP, PhytoScience, 2024</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-1.jpg">
+                    <img src="img/cert-1.jpg" alt="PRO Женское здоровье — Школа Доктора Павлова" loading="lazy">
+                    <figcaption>PRO Женское здоровье, Школа Доктора Павлова, 2025</figcaption>
+                </figure>
+                <figure class="cert-item" data-src="img/cert-3.jpg">
+                    <img src="img/cert-3.jpg" alt="Анализы и Витамины — PREVENT 2.0" loading="lazy">
+                    <figcaption>&laquo;Анализы и Витамины&raquo;, PREVENT 2.0, 2025</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ALGORITHM ===== -->
+    <section class="algorithm section" id="algorithm">
+        <div class="container">
+            <h2 class="section-title fade-in">Алгоритм работы</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in" data-step="1">
+                    <p><strong>Запрос на консультацию.</strong> Напишите мне в&nbsp;мессенджере (Telegram или&nbsp;MAX) и&nbsp;укажите, что хотите бесплатную консультацию (мини-диагностику).</p>
+                </div>
+                <div class="timeline-item fade-in" data-step="2">
+                    <p><strong>Подтверждение запроса.</strong> В&nbsp;ответном сообщении мы&nbsp;согласуем удобное вам время 20-минутной первичной консультации.</p>
+                </div>
+                <div class="timeline-item fade-in" data-step="3">
+                    <p><strong>Первичная бесплатная консультация.</strong> Формат&nbsp;&mdash; аудиосвязь, длительность 15&ndash;20&nbsp;минут. Мини-диагностика на&nbsp;основе анкеты, уточнение вашего запроса и&nbsp;согласование полноценной консультации.</p>
+                </div>
+                <div class="timeline-item fade-in" data-step="4">
+                    <p><strong>Подготовка.</strong> Если решите продолжить, вы&nbsp;получите список необходимых анализов и&nbsp;большой опросник. Результаты анализов и&nbsp;заполненный опросник можно отправить в&nbsp;мессенджер в&nbsp;любом формате.</p>
+                </div>
+                <div class="timeline-item fade-in" data-step="5">
+                    <p><strong>Индивидуальная консультация.</strong> Формат&nbsp;&mdash; видеосвязь в&nbsp;мессенджере. Длительность&nbsp;&mdash; 60&nbsp;минут.</p>
+                </div>
+                <div class="timeline-item fade-in" data-step="6">
+                    <p><strong>Получение рекомендаций.</strong> В&nbsp;течение двух дней после консультации вы&nbsp;получите файл с&nbsp;рекомендациями, отражающий содержание всей консультации.</p>
+                </div>
+                <div class="timeline-item fade-in" data-step="7">
+                    <p><strong>Уточняющие вопросы.</strong> В&nbsp;течение 5&nbsp;дней после консультации вы&nbsp;можете задавать уточняющие вопросы относительно схемы нутрицевтиков и&nbsp;внедрения рекомендаций в&nbsp;свою жизнь и&nbsp;рацион.</p>
+                </div>
+            </div>
+            <div class="fade-in" style="max-width:700px;margin:32px auto 0;padding:24px 28px;background:#F3F7F0;border-left:4px solid #3D6B4F;border-radius:12px;">
+                <p style="margin:0;color:#444;font-size:0.95rem;line-height:1.7;"><strong style="color:#3D6B4F;">Сопровождение.</strong> Для&nbsp;тех, кому нужна регулярная работа: формат&nbsp;&mdash; одна консультация в&nbsp;неделю, четыре встречи в&nbsp;месяц. Подходит для&nbsp;вопросов, требующих кропотливой и&nbsp;постоянной работы.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing section" id="pricing">
+        <div class="container">
+            <h2 class="section-title fade-in">Консультации</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card featured fade-in">
+                    <span class="pricing-badge">Популярный выбор</span>
+                    <h3>Первичная<br>устная консультация<br><span class="pricing-subtitle">(мини-диагностика)</span></h3>
+                    <div class="pricing-price">Бесплатно</div>
+                    <div class="pricing-duration">20 минут</div>
+                    <ul class="pricing-features">
+                        <li>Обсуждение вашего запроса</li>
+                        <li>Устные рекомендации по питанию</li>
+                        <li>Рекомендации по образу жизни</li>
+                        <li>Ответы на вопросы</li>
+                    </ul>
+                    <a href="https://t.me/irina_nutripitanie" target="_blank" rel="noopener" class="btn btn-sm">Записаться</a>
+                </div>
+                <div class="pricing-card fade-in">
+                    <h3>Полноценная консультация</h3>
+                    <div class="pricing-price">Цена уточняется</div>
+                    <div class="pricing-duration">60 минут</div>
+                    <ul class="pricing-features">
+                        <li>Анкетирование перед консультацией</li>
+                        <li>Список анализов и расшифровка</li>
+                        <li>Видеоконсультация 60 минут</li>
+                        <li>Файл с персональными рекомендациями</li>
+                        <li>Схема нутрицевтиков на 2&ndash;4 месяца с обоснованием каждого элемента</li>
+                        <li>Поддержка 5 дней после консультации</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-sm">Записаться</a>
+                </div>
+                <div class="pricing-card fade-in">
+                    <h3>Сопровождение</h3>
+                    <div class="pricing-price">Цена уточняется</div>
+                    <div class="pricing-duration">4 встречи в месяц</div>
+                    <ul class="pricing-features">
+                        <li>Всё, что входит в полноценную консультацию</li>
+                        <li>Контроль динамики анализов</li>
+                        <li>Корректировка рекомендаций</li>
+                        <li>Поддержка между консультациями</li>
+                        <li>Повторная консультация через 2&ndash;3 месяца: расшифровка анализов, симптомов, коррекция схемы нутрицевтиков ещё на 2&ndash;4 месяца</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-sm">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products section" id="products">
+        <div class="container">
+            <h2 class="section-title fade-in">Мои продукты</h2>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <img src="img/product-1.jpg" alt="Путеводитель по БАД" loading="lazy">
+                    <div class="product-card-body">
+                        <h3>Закрытый телеграм-канал &laquo;Путеводитель по БАД&raquo;</h3>
+                        <p>База данных с эффективными добавками, схемы распространённых проблем, описание работы БАД, подборка вариантов из России, личные промокоды, акции, скидки, прямые эфиры с разбором кейсов.</p>
+                        <a href="#" class="btn btn-outline btn-sm">Подробнее</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <img src="img/product-2.jpg" alt="Биохаки сна" loading="lazy">
+                    <div class="product-card-body">
+                        <h3>Гайд &laquo;Биохаки сна&raquo;</h3>
+                        <p>Практическое руководство по улучшению качества сна с научно обоснованными рекомендациями и простыми шагами для внедрения.</p>
+                        <a href="#" class="btn btn-outline btn-sm">Подробнее</a>
+                    </div>
+                </div>
+                <div class="product-card fade-in">
+                    <img src="img/product-3.jpg" alt="Гид по супермаркету" loading="lazy">
+                    <div class="product-card-body">
+                        <h3>Гид по супермаркету</h3>
+                        <p>Как выбирать качественные продукты в обычном магазине. Практические советы по чтению этикеток и составов.</p>
+                        <a href="#" class="btn btn-outline btn-sm">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FREE MATERIALS ===== -->
+    <section class="free-materials section" id="free-materials">
+        <div class="container">
+            <h2 class="section-title fade-in">Бесплатные материалы</h2>
+            <div class="free-grid">
+                <div class="free-item fade-in">
+                    <img src="img/free-1.jpg" alt="Рецепты зелёных смузи" loading="lazy">
+                    <div class="free-item-body">
+                        <h4>6 СУПЕР рецептов зелёных смузи</h4>
+                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                    </div>
+                </div>
+                <div class="free-item fade-in">
+                    <img src="img/free-2.jpg" alt="Чек-лист по рису и крупам" loading="lazy">
+                    <div class="free-item-body">
+                        <h4>Чек-лист по рису и крупам</h4>
+                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                    </div>
+                </div>
+                <div class="free-item fade-in">
+                    <img src="img/free-3.jpg" alt="Как выбирать сыры" loading="lazy">
+                    <div class="free-item-body">
+                        <h4>Как выбирать сыры твёрдых сортов — 7 простых шагов</h4>
+                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                    </div>
+                </div>
+                <div class="free-item fade-in">
+                    <img src="img/free-4.jpg" alt="Масла для жарки" loading="lazy">
+                    <div class="free-item-body">
+                        <h4>Масла для жарки — критерии выбора и безопасные варианты</h4>
+                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                    </div>
+                </div>
+                <div class="free-item fade-in">
+                    <img src="img/free-5.jpg" alt="Гайд: как правильно выбрать сыр" loading="lazy">
+                    <div class="free-item-body">
+                        <h4>Гайд: как правильно выбрать сыр</h4>
+                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                    </div>
+                </div>
+                <div class="free-item fade-in">
+                    <img src="img/free-6.jpg" alt="Конструктор завтрака" loading="lazy">
+                    <div class="free-item-body">
+                        <h4>Конструктор правильного и полноценного завтрака</h4>
+                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DISCLAIMER ===== -->
+    <section class="disclaimer">
+        <div class="container">
+            <p>Моя консультация является информационной услугой и не является врачебной. Рекомендации по питанию, образу жизни и нутрицевтикам даются в целях информирования и поддержки здоровья. Они не заменяют медицинские процедуры, лечение и лечение, которые может проводить только врач. Я не изменяю назначения врачей и не обсуждаю их. При наличии диагностированного заболевания, регулярном приёме лекарственных препаратов, беременности, кормлении грудью или наличии каких-либо симптомов, требующих медицинского внимания, перед внедрением рекомендаций необходимо проконсультироваться с лечащим врачом.</p>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT / CTA ===== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="fade-in">Готовы начать путь к здоровью?</h2>
+            <p class="fade-in">Свяжитесь со мной удобным способом, и мы начнём работу над вашим здоровьем</p>
+            <div class="contact-buttons fade-in">
+                <a href="https://t.me/irina_nutripitanie" class="contact-btn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    Telegram
+                </a>
+                <a href="https://vk.com/" class="contact-btn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.27-1.422 2.18-3.61 2.18-3.61.119-.254.322-.491.762-.491h1.744c.525 0 .643.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.72-.576.72z"/></svg>
+                    ВКонтакте
+                </a>
+                <a href="https://max.ru/u/f9LHodD0cOKOVUE0f-h1nVkcpW5LMJ0otUeORt4QuiNACGxN2w_ZqQH3n14" class="contact-btn" target="_blank" rel="noopener">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    MAX
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-left">
+                <p>&copy; 2026 Ирина Попович.</p>
+                <p style="color:#999;font-size:0.8rem;margin-top:8px;max-width:460px;">Консультации по&nbsp;питанию носят информационный характер, не&nbsp;являются медицинскими услугами и&nbsp;не&nbsp;заменяют консультацию врача.</p>
+            </div>
+            <div class="footer-links">
+                <span style="color:#999;font-size:0.8rem;">Сайт носит информационный характер и&nbsp;не&nbsp;собирает персональные данные</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://t.me/irina_nutripitanie" target="_blank" rel="noopener" aria-label="Telegram">
+                    <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                </a>
+                <a href="https://vk.com/" target="_blank" rel="noopener" aria-label="ВКонтакте">
+                    <svg viewBox="0 0 24 24"><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.678.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.27-1.422 2.18-3.61 2.18-3.61.119-.254.322-.491.762-.491h1.744c.525 0 .643.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.474-.085.72-.576.72z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Закрыть">&times;</button>
+        <img src="" alt="Сертификат">
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // Mobile menu toggle
+        const burger = document.getElementById('burger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu on link click
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                burger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Fade-in on scroll with IntersectionObserver
+        var fadeElements = document.querySelectorAll('.fade-in');
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            fadeElements.forEach(function(el) {
+                observer.observe(el);
+            });
+        } else {
+            // Fallback: show all elements immediately
+            fadeElements.forEach(function(el) {
+                el.classList.add('visible');
+            });
+        }
+
+        // Certificate lightbox
+        var lightbox = document.getElementById('lightbox');
+        var lightboxImg = lightbox.querySelector('img');
+        var lightboxClose = lightbox.querySelector('.lightbox-close');
+
+        document.querySelectorAll('.cert-item').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var src = this.getAttribute('data-src');
+                lightboxImg.src = src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Education cards → open certificate in lightbox
+        document.querySelectorAll('.edu-item[data-cert]').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var src = this.getAttribute('data-cert');
+                lightboxImg.src = src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightbox.addEventListener('click', function() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        lightboxImg.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Close lightbox on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (lightbox.classList.contains('active')) {
+                    lightbox.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                if (mobileMenu.classList.contains('active')) {
+                    burger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
