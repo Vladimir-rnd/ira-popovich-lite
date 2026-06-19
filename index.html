@@ -1204,21 +1204,57 @@
             top: 12px;
         }
 
-        /* честный prefers-reduced-motion */
-        @media (prefers-reduced-motion: reduce) {
-            html {
-                scroll-behavior: auto;
-            }
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-            }
-            .fade-in {
-                opacity: 1 !important;
-                transform: none !important;
-            }
+        /* Движение (fade-in) оставлено включённым для всех по решению владельца —
+           reduced-motion НЕ глушит анимации, чтобы единое визуальное впечатление
+           сохранялось даже при включённой системной настройке «уменьшить движение». */
+
+        /* ============================================================
+           ДИЗАЙН-РЕФАЙН v2 — премиальная полировка (бренд не меняется)
+           ============================================================ */
+
+        /* Издательская типографика заголовков */
+        h1, h2, h3, h4 { letter-spacing: -0.015em; text-wrap: balance; }
+        .hero h1 { letter-spacing: -0.025em; line-height: 1.15; }
+        .section-title { letter-spacing: -0.01em; }
+
+        /* Читаемость длинных строк (важно для аудитории 45+) */
+        .about-text p { max-width: 34rem; }
+
+        /* Числа — таблично (цены, длительность, шаги) */
+        .pricing-price, .pricing-duration, .timeline-item::before {
+            font-variant-numeric: tabular-nums;
         }
+
+        /* Убираем избыточную «дыру» под hero-лейблом (было 110px) */
+        .hero-label { margin-bottom: 30px; }
+
+        /* Единая мягкая шкала теней + гармония радиусов */
+        .problem-card, .edu-item, .cert-item, .pricing-card {
+            border-radius: 18px;
+            box-shadow: 0 1px 2px rgba(46,46,46,0.04), 0 8px 24px rgba(46,46,46,0.05);
+        }
+        .problem-card:hover, .edu-item:hover, .cert-item:hover {
+            box-shadow: 0 4px 10px rgba(46,46,46,0.05), 0 18px 44px rgba(61,107,79,0.12);
+        }
+        .pricing-card:hover {
+            box-shadow: 0 6px 14px rgba(46,46,46,0.05), 0 24px 56px rgba(61,107,79,0.14);
+        }
+        .hero-image img, .about-image img {
+            border-radius: 22px;
+            box-shadow: 0 2px 8px rgba(46,46,46,0.04), 0 30px 60px rgba(46,46,46,0.10);
+        }
+        .timeline-item { border-radius: 16px; }
+
+        /* Stagger — карточки в сетках появляются волной (премиум-ритм) */
+        .edu-item.fade-in:nth-child(3n+2)  { transition-delay: 0.07s; }
+        .edu-item.fade-in:nth-child(3n+3)  { transition-delay: 0.14s; }
+        .cert-item.fade-in:nth-child(4n+2) { transition-delay: 0.06s; }
+        .cert-item.fade-in:nth-child(4n+3) { transition-delay: 0.12s; }
+        .cert-item.fade-in:nth-child(4n+4) { transition-delay: 0.18s; }
+        .pricing-card.fade-in:nth-child(2) { transition-delay: 0.10s; }
+        .pricing-card.fade-in:nth-child(3) { transition-delay: 0.20s; }
+        .problem-card.fade-in:nth-child(2) { transition-delay: 0.10s; }
+
     </style>
 </head>
 <body>
