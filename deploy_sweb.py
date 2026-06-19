@@ -85,6 +85,21 @@ def main():
         print("Загружено картинок: %d" % len(imgs))
         ftp.cwd(c["dir"])
 
+        # папка files (PDF лид-магниты)
+        files_dir = os.path.join(REPO, "files")
+        if os.path.isdir(files_dir):
+            try:
+                ftp.cwd("files")
+            except error_perm:
+                ftp.mkd("files")
+                ftp.cwd("files")
+                print("  создан каталог files/")
+            pdfs = sorted(glob.glob(os.path.join(files_dir, "*.pdf")))
+            for p in pdfs:
+                upload(ftp, p, os.path.basename(p))
+            print("Загружено PDF: %d" % len(pdfs))
+            ftp.cwd(c["dir"])
+
         print("\nСодержимое %s:" % c["dir"])
         ftp.retrlines("LIST")
     finally:

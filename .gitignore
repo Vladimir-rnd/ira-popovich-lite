@@ -2,3 +2,5 @@ Thumbs.db
 .DS_Store
 .ftp
 *.ftp
+# PDF лид-магниты — производные артефакты (собираются из protected/), деплоятся по FTP
+files/

@@ -810,6 +810,8 @@
             overflow: hidden;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .free-item:hover {
@@ -825,6 +827,9 @@
 
         .free-item-body {
             padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .free-item h4 {
@@ -834,6 +839,11 @@
             line-height: 1.4;
             font-family: 'Manrope', sans-serif;
             font-weight: 600;
+        }
+
+        .free-item-body .btn {
+            margin-top: auto;       /* кнопку прижать к низу карточки — выравнивание по ряду */
+            align-self: flex-start; /* естественная ширина, по левому краю */
         }
 
         /* ========== DISCLAIMER ========== */
@@ -1617,42 +1627,42 @@
                     <img src="img/free-1.jpg" width="350" height="250" alt="Рецепты зелёных смузи" loading="lazy">
                     <div class="free-item-body">
                         <h4>6 СУПЕР рецептов зелёных смузи</h4>
-                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                        <a href="files/smuzi.pdf" class="btn btn-outline btn-sm" download data-goal="dl_smuzi">Скачать</a>
                     </div>
                 </div>
                 <div class="free-item fade-in">
                     <img src="img/free-2.jpg" width="350" height="250" alt="Чек-лист по рису и крупам" loading="lazy">
                     <div class="free-item-body">
                         <h4>Чек-лист по рису и крупам</h4>
-                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                        <a href="files/ris.pdf" class="btn btn-outline btn-sm" download data-goal="dl_ris">Скачать</a>
                     </div>
                 </div>
                 <div class="free-item fade-in">
                     <img src="img/free-3.jpg" width="350" height="250" alt="Как выбирать сыры" loading="lazy">
                     <div class="free-item-body">
                         <h4>Как выбирать сыры твёрдых сортов — 7 простых шагов</h4>
-                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                        <a href="files/syr.pdf" class="btn btn-outline btn-sm" download data-goal="dl_syr">Скачать</a>
                     </div>
                 </div>
                 <div class="free-item fade-in">
                     <img src="img/free-4.jpg" width="350" height="250" alt="Масла для жарки" loading="lazy">
                     <div class="free-item-body">
                         <h4>Масла для жарки — критерии выбора и безопасные варианты</h4>
-                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                        <a href="files/masla.pdf" class="btn btn-outline btn-sm" download data-goal="dl_masla">Скачать</a>
                     </div>
                 </div>
                 <div class="free-item fade-in">
-                    <img src="img/free-5.jpg" width="350" height="250" alt="Гайд: как правильно выбрать сыр" loading="lazy">
+                    <img src="img/free-5.jpg" width="350" height="250" alt="Чек-лист в магазин" loading="lazy">
                     <div class="free-item-body">
-                        <h4>Гайд: как правильно выбрать сыр</h4>
-                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                        <h4>Чек-лист в магазин: смотри и выбирай</h4>
+                        <a href="files/magazin.pdf" class="btn btn-outline btn-sm" download data-goal="dl_magazin">Скачать</a>
                     </div>
                 </div>
                 <div class="free-item fade-in">
-                    <img src="img/free-6.jpg" width="350" height="250" alt="Конструктор завтрака" loading="lazy">
+                    <img src="img/free-6.jpg" width="350" height="250" alt="Опросник по детоксикации" loading="lazy">
                     <div class="free-item-body">
-                        <h4>Конструктор правильного и полноценного завтрака</h4>
-                        <a href="#" class="btn btn-outline btn-sm">Скачать</a>
+                        <h4>Опросник: сигналы, что система очистки перегружена</h4>
+                        <a href="files/detox.pdf" class="btn btn-outline btn-sm" download data-goal="dl_detox">Скачать</a>
                     </div>
                 </div>
             </div>
