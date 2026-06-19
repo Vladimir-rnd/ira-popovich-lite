@@ -149,6 +149,13 @@
             font-size: 0.9rem;
         }
 
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
         /* ========== FADE-IN ANIMATION ========== */
         .fade-in {
             opacity: 0;
@@ -1041,6 +1048,15 @@
                 text-align: center;
             }
 
+            .hero-cta {
+                justify-content: center;
+            }
+
+            /* «Давайте знакомиться» — центр только на мобильном (десктоп остаётся слева, инлайн) */
+            .about-text .section-title {
+                text-align: center !important;
+            }
+
             .hero-content {
                 order: 2;
             }
@@ -1142,6 +1158,14 @@
 
             .free-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .free-item-body {
+                text-align: center;
+            }
+
+            .free-item-body .btn {
+                align-self: center;
             }
 
             .cert-grid {
@@ -1339,7 +1363,7 @@
                 <h1>Ваш организм больше не&nbsp;работает как раньше?</h1>
                 <p>Если вам 45+ и вы всё чаще чувствуете:<br>«Я как будто разваливаюсь» — дело не в возрасте.</p>
                 <p><strong>Это сигнал, что система дала сбой.<br>И с этим можно разобраться.</strong></p>
-                <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+                <div class="hero-cta">
                     <a href="#pricing" class="btn">Записаться на консультацию</a>
                     <a href="#channels" class="btn btn-outline" data-goal="hero_channel">Мой канал</a>
                 </div>
