@@ -1896,22 +1896,13 @@
     </div>
     <script>
         // Цели Я.Метрики на кнопки записи/контактов.
-        // На внешних ссылках (t.me/vk/max) тормозим переход и шлём цель с колбэком —
-        // иначе на телефоне переход в приложение выгружает страницу раньше отправки маячка.
+        // Переход НЕ перехватываем: внешние ссылки идут с target="_blank" (открывают новую
+        // вкладку/приложение синхронно внутри тапа — на мобильных не блокируется), якоря
+        // скроллят по странице. Маячок цели успевает уйти: страница остаётся открытой.
         document.querySelectorAll('[data-goal]').forEach(function(el){
-            el.addEventListener('click', function(e){
-                var goal = el.getAttribute('data-goal');
-                if (typeof ym !== 'function') return;            // нет Метрики — обычное поведение ссылки
-                var href = el.getAttribute('href') || '';
-                if (!/^https?:\/\//i.test(href)) {               // якорь #contact — со страницы не уводит, шлём сразу
-                    ym(109986494, 'reachGoal', goal);
-                    return;
-                }
-                e.preventDefault();                              // внешняя ссылка: сначала цель, потом переход
-                var navigated = false;
-                var go = function(){ if (navigated) return; navigated = true; window.location.href = href; };
-                try { ym(109986494, 'reachGoal', goal, {}, go); } catch(_) { go(); }
-                setTimeout(go, 700);                             // страховка, если колбэк не пришёл (блокировщик/медленный tag.js)
+            el.addEventListener('click', function(){
+                if (typeof ym !== 'function') return;
+                try { ym(109986494, 'reachGoal', el.getAttribute('data-goal')); } catch(_) {}
             });
         });
         // Cookie-уведомление: показываем один раз, согласие помним в localStorage
